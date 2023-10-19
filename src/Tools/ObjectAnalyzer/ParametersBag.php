@@ -79,7 +79,7 @@ class ParametersBag implements Bag
     /**
      * @return ArrayIterator
      */
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return new ArrayIterator($this->parameters);
     }
@@ -87,7 +87,7 @@ class ParametersBag implements Bag
     /**
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return count($this->parameters);
     }

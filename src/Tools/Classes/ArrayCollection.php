@@ -105,7 +105,7 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
      *
      * {@inheritDoc}
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return $this->containsKey($offset);
     }
@@ -115,7 +115,7 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
      *
      * {@inheritDoc}
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return $this->get($offset);
     }
@@ -125,10 +125,11 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
      *
      * {@inheritDoc}
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if ( ! isset($offset)) {
-            return $this->add($value);
+            $this->add($value);
+            return;
         }
         $this->set($offset, $value);
     }
@@ -138,9 +139,9 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
      *
      * {@inheritDoc}
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
-        return $this->remove($offset);
+        $this->remove($offset);
     }
 
     /**
@@ -172,7 +173,7 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
      */
     public function get($key)
     {
-        return isset($this->elements[$key]) ? $this->elements[$key] : null;
+        return $this->elements[$key] ?? null;
     }
 
     /**
@@ -194,7 +195,7 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
     /**
      * {@inheritDoc}
      */
-    public function count()
+    public function count(): int
     {
         return count($this->elements);
     }
@@ -229,7 +230,7 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
      *
      * {@inheritDoc}
      */
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return new ArrayIterator($this->elements);
     }
