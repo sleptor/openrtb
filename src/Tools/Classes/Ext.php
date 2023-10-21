@@ -38,7 +38,7 @@ abstract class Ext implements Arrayable
      */
     public function get($key)
     {
-        return isset($this->parameters[$key]) ? $this->parameters[$key] : null;
+        return $this->parameters[$key] ?? null;
     }
 
     /**

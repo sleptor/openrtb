@@ -2,6 +2,7 @@
 
 namespace OpenRtb\NativeAdResponse;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -47,7 +48,7 @@ class Link implements Arrayable
     /**
      * @param string $url
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setUrl($url)
     {
@@ -67,7 +68,7 @@ class Link implements Arrayable
     /**
      * @param string $clicktrackers
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addClicktrackers($clicktrackers)
     {
@@ -97,7 +98,7 @@ class Link implements Arrayable
     /**
      * @param string $fallback
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setFallback($fallback)
     {

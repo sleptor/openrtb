@@ -2,6 +2,7 @@
 
 namespace OpenRtb;
 
+use OpenRtb\Tools\Classes\Ext;
 use OpenRtb\Tools\ObjectAnalyzer\ObjectDescriberFactory;
 use OpenRtb\Tools\ObjectAnalyzer\ObjectDescriber;
 
@@ -23,7 +24,7 @@ class Hydrator
                 is_array($value) &&
                 $objectDescriptor->properties->has($key) &&
                 $objectDescriptor->properties->get($key)->isObject() &&
-                $objectDescriptor->properties->get($key)->get('var') == 'ArrayCollection'
+                $objectDescriptor->properties->get($key)->get('var') === 'ArrayCollection'
             ) {
                 self::set($object, $key, self::getDependencyObject($objectDescriptor, $key));
                 $method = 'add'.ucfirst($key);
@@ -41,7 +42,7 @@ class Hydrator
                 self::set($object, $key, self::hydrate($value, self::getDependencyObject($objectDescriptor, $key)));
             } elseif ($objectDescriptor->properties->has($key)) {
                 self::set($object, $key, $value);
-            } elseif ($object instanceof \OpenRtb\Tools\Classes\Ext) {
+            } elseif ($object instanceof Ext) {
                 $object->set($key, $value);
             }
         }
@@ -55,7 +56,7 @@ class Hydrator
      */
     protected static function checkFirstArrayKey(array $data, ObjectDescriber $objectDescriber)
     {
-        if (strtolower(current(array_keys($data))) == strtolower($objectDescriber->getClassNameWithoutNamespace())) {
+        if (strtolower(current(array_keys($data))) === strtolower($objectDescriber->getClassNameWithoutNamespace())) {
             return current($data);
         }
         return $data;
@@ -101,7 +102,7 @@ class Hydrator
         if ($getClassNameFromAnnotation) {
             $key = $objectDescriber->properties->get($key)->get('var');
         }
-        if ($key == 'ArrayCollection') {
+        if ($key === 'ArrayCollection') {
             return 'OpenRtb\Tools\Classes\ArrayCollection';
         }
         return $objectDescriber->getNamespace().'\\'.$key;

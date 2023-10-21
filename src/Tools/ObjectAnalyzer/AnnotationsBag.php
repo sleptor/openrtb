@@ -28,7 +28,7 @@ class AnnotationsBag extends ParametersBag
         preg_match_all('/@(.*)/', $doc, $matches);
         foreach ($matches[1] as $annotation) {
             $annotation = trim($annotation);
-            if (strpos($annotation, ' ') === false) {
+            if (!str_contains($annotation, ' ')) {
                 $this->set($annotation, true);
             } else {
                 list($key, $value) = explode(' ', $annotation);

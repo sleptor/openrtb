@@ -25,7 +25,6 @@ trait GetConstants
 
     private static function getConstants()
     {
-        $self = new ReflectionClass(__CLASS__);
-        return $self->getConstants();
+        return (new ReflectionClass(__CLASS__))->getConstants();
     }
 }

@@ -2,6 +2,7 @@
 
 namespace OpenRtb\NativeAdResponse;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -71,7 +72,7 @@ class Assets implements Arrayable
     /**
      * @param int $id
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setId($id)
     {
@@ -90,7 +91,7 @@ class Assets implements Arrayable
     /**
      * @param int $required
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setRequired($required)
     {

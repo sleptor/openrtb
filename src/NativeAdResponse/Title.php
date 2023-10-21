@@ -2,6 +2,7 @@
 
 namespace OpenRtb\NativeAdResponse;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -34,7 +35,7 @@ class Title implements Arrayable
     /**
      * @param string $text
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setText($text)
     {
@@ -52,7 +53,7 @@ class Title implements Arrayable
     }
 
     /**
-     * @param $ext
+     * @param Ext $ext
      * @return $this
      */
     public function setExt(Ext $ext)

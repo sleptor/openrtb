@@ -2,6 +2,7 @@
 
 namespace OpenRtb\BidRequest;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -64,7 +65,7 @@ class Format implements Arrayable
     /**
      * @param $w
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setW($w)
     {
@@ -85,7 +86,7 @@ class Format implements Arrayable
     /**
      * @param $h
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setH($h)
     {
@@ -106,7 +107,7 @@ class Format implements Arrayable
     /**
      * @param $wratio
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setWratio($wratio)
     {
@@ -127,7 +128,7 @@ class Format implements Arrayable
     /**
      * @param $hratio
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setHratio($hratio)
     {
@@ -148,7 +149,7 @@ class Format implements Arrayable
     /**
      * @param $wmin
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setWmin($wmin)
     {
@@ -157,5 +158,4 @@ class Format implements Arrayable
 
         return $this;
     }
-
 }

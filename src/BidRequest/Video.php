@@ -14,6 +14,7 @@ use OpenRtb\BidRequest\Specification\VideoLinearity;
 use OpenRtb\BidRequest\Specification\VideoMimeType;
 use OpenRtb\BidRequest\Specification\VideoPlacementType;
 use OpenRtb\BidRequest\Specification\VideoPlaybackMethods;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -270,7 +271,7 @@ class Video implements Arrayable
     /**
      * @param string $mimes
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addMimes($mimes)
     {
@@ -300,7 +301,7 @@ class Video implements Arrayable
     /**
      * @param int $minduration
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMinduration($minduration)
     {
@@ -319,7 +320,7 @@ class Video implements Arrayable
     /**
      * @param int $maxduration
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMaxduration($maxduration)
     {
@@ -339,7 +340,7 @@ class Video implements Arrayable
     /**
      * @param $protocol
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setProtocol($protocol)
     {
@@ -358,7 +359,7 @@ class Video implements Arrayable
     /**
      * @param int $protocols
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addProtocols($protocols)
     {
@@ -388,7 +389,7 @@ class Video implements Arrayable
     /**
      * @param int $w
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setW($w)
     {
@@ -407,7 +408,7 @@ class Video implements Arrayable
     /**
      * @param int $h
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setH($h)
     {
@@ -426,7 +427,7 @@ class Video implements Arrayable
     /**
      * @param int $startdelay
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setStartdelay($startdelay)
     {
@@ -445,7 +446,7 @@ class Video implements Arrayable
     /**
      * @param int $linearity
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setLinearity($linearity)
     {
@@ -465,7 +466,7 @@ class Video implements Arrayable
     /**
      * @param int $sequence
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setSequence($sequence)
     {
@@ -484,7 +485,7 @@ class Video implements Arrayable
     /**
      * @param int $battr
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addBattr($battr)
     {
@@ -514,7 +515,7 @@ class Video implements Arrayable
     /**
      * @param int $maxextended
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMaxextended($maxextended)
     {
@@ -533,7 +534,7 @@ class Video implements Arrayable
     /**
      * @param int $minbitrate
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMinbitrate($minbitrate)
     {
@@ -552,7 +553,7 @@ class Video implements Arrayable
     /**
      * @param int $maxbitrate
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMaxbitrate($maxbitrate)
     {
@@ -571,7 +572,7 @@ class Video implements Arrayable
     /**
      * @param int $boxingallowed
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setBoxingallowed($boxingallowed)
     {
@@ -591,7 +592,7 @@ class Video implements Arrayable
     /**
      * @param int $playbackmethod
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addPlaybackmethod($playbackmethod)
     {
@@ -621,7 +622,7 @@ class Video implements Arrayable
     /**
      * @param int $delivery
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addDelivery($delivery)
     {
@@ -651,7 +652,7 @@ class Video implements Arrayable
     /**
      * @param int $pos
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setPos($pos)
     {
@@ -699,7 +700,7 @@ class Video implements Arrayable
     /**
      * @param int $api
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addApi($api)
     {
@@ -729,7 +730,7 @@ class Video implements Arrayable
     /**
      * @param $companiontype
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addCompaniontype($companiontype)
     {
@@ -777,7 +778,7 @@ class Video implements Arrayable
     /**
      * @param $skip
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setSkip($skip)
     {
@@ -798,7 +799,7 @@ class Video implements Arrayable
     /**
      * @param $skipmin
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setSkipmin($skipmin)
     {
@@ -819,7 +820,7 @@ class Video implements Arrayable
     /**
      * @param $skipafter
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setSkipafter($skipafter)
     {
@@ -840,7 +841,7 @@ class Video implements Arrayable
     /**
      * @param $placement
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setPlacement($placement)
     {
@@ -861,7 +862,7 @@ class Video implements Arrayable
     /**
      * @param $playbackend
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setPlaybackend($playbackend)
     {
@@ -870,5 +871,4 @@ class Video implements Arrayable
 
         return $this;
     }
-
 }

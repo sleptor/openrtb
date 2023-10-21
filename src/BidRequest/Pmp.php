@@ -2,6 +2,7 @@
 
 namespace OpenRtb\BidRequest;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\BidRequest\Specification\BitType;
 use OpenRtb\Tools\Traits\SetterValidation;
@@ -55,7 +56,7 @@ class Pmp implements Arrayable
     /**
      * @param int $private_auction
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setPrivate_auction($private_auction)
     {

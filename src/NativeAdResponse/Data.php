@@ -2,6 +2,7 @@
 
 namespace OpenRtb\NativeAdResponse;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -40,7 +41,7 @@ class Data implements Arrayable
     /**
      * @param string $label
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setLabel($label)
     {
@@ -60,7 +61,7 @@ class Data implements Arrayable
     /**
      * @param string $value
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setValue($value)
     {

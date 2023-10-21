@@ -134,6 +134,4 @@ class Mapper
         preg_match($regex, $node, $matches);
         return $matches;
     }
-
-
 }

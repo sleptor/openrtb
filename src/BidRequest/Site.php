@@ -3,6 +3,7 @@
 namespace OpenRtb\BidRequest;
 
 use OpenRtb\BidRequest\Specification\BitType;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -203,7 +204,7 @@ class Site implements Arrayable
     /**
      * @param string $cat
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addCat($cat)
     {
@@ -233,7 +234,7 @@ class Site implements Arrayable
     /**
      * @param string $sectioncat
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addSectioncat($sectioncat)
     {
@@ -263,7 +264,7 @@ class Site implements Arrayable
     /**
      * @param string $pagecat
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addPagecat($pagecat)
     {
@@ -349,7 +350,7 @@ class Site implements Arrayable
     /**
      * @param int $mobile
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMobile($mobile)
     {
@@ -369,7 +370,7 @@ class Site implements Arrayable
     /**
      * @param $privacypolicy
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setPrivacypolicy($privacypolicy)
     {
@@ -425,7 +426,7 @@ class Site implements Arrayable
     /**
      * @param string $keywords
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setKeywords($keywords)
     {

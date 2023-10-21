@@ -2,6 +2,7 @@
 
 namespace OpenRtb\NativeAdRequest;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -34,7 +35,7 @@ class Title implements Arrayable
     /**
      * @param int $len
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setLen($len)
     {

@@ -2,8 +2,10 @@
 
 namespace OpenRtb\Tools\Traits;
 
+use OpenRtb\Tools\Classes\ArrayCollection;
 use OpenRtb\Tools\Exceptions\ExceptionMissingRequiredField;
 use OpenRtb\Tools\ObjectAnalyzer\ObjectDescriberFactory;
+use OpenRtb\Tools\ObjectAnalyzer\ParametersBag;
 
 trait ToArray
 {
@@ -36,13 +38,12 @@ trait ToArray
     }
 
     /**
-     * @return \OpenRtb\Tools\ObjectAnalyzer\ParametersBag
+     * @return ParametersBag
      * @throws \Exception
      */
     private function getProperties()
     {
-        $objectDescriptor = ObjectDescriberFactory::create(__CLASS__);
-        return $objectDescriptor->properties;
+        return ObjectDescriberFactory::create(__CLASS__)->properties;
     }
 
     /**
@@ -52,7 +53,7 @@ trait ToArray
     private function getArrayFromObject($object)
     {
         $result = [];
-        if ($object instanceof \OpenRtb\Tools\Classes\ArrayCollection && ! $object->isEmpty()) {
+        if ($object instanceof ArrayCollection && ! $object->isEmpty()) {
             foreach ($object as $item) {
                 $result[] = $item->toArray();
             }

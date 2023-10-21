@@ -2,6 +2,7 @@
 
 namespace OpenRtb\BidRequest;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -79,7 +80,7 @@ class Deal implements Arrayable
     /**
      * @param string $id
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setId($id)
     {
@@ -99,7 +100,7 @@ class Deal implements Arrayable
     /**
      * @param float $bidfloor
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setBidfloor($bidfloor)
     {
@@ -118,7 +119,7 @@ class Deal implements Arrayable
     /**
      * @param string $bidfloorcur
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setBidfloorcur($bidfloorcur)
     {
@@ -138,7 +139,7 @@ class Deal implements Arrayable
     /**
      * @param int $at
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setAt($at)
     {
@@ -157,7 +158,7 @@ class Deal implements Arrayable
     /**
      * @param string $wseat
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addWseat($wseat)
     {
@@ -187,7 +188,7 @@ class Deal implements Arrayable
     /**
      * @param string $wadomain
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addWadomain($wadomain)
     {

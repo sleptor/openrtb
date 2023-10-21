@@ -24,6 +24,6 @@ class ExceptionInvalidValue extends Exception
     private function retriveValue($index, $subIndex)
     {
         $trace = $this->getTrace();
-        return isset($trace[$index][$subIndex]) ? $trace[$index][$subIndex] : 'null';
+        return $trace[$index][$subIndex] ?? 'null';
     }
 }

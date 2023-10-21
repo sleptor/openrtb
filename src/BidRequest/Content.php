@@ -3,6 +3,7 @@
 namespace OpenRtb\BidRequest;
 
 use OpenRtb\BidRequest\Specification\ProductionQuality;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\BidRequest\Specification\BitType;
 use OpenRtb\BidRequest\Specification\ContentContext;
@@ -209,7 +210,7 @@ class Content implements Arrayable
     /**
      * @param $id
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setId($id)
     {
@@ -229,7 +230,7 @@ class Content implements Arrayable
     /**
      * @param $episode
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setEpisode($episode)
     {
@@ -248,7 +249,7 @@ class Content implements Arrayable
     /**
      * @param $title
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setTitle($title)
     {
@@ -268,7 +269,7 @@ class Content implements Arrayable
     /**
      * @param $series
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setSeries($series)
     {
@@ -288,7 +289,7 @@ class Content implements Arrayable
     /**
      * @param $season
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setSeason($season)
     {
@@ -326,7 +327,7 @@ class Content implements Arrayable
     /**
      * @param $url
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setUrl($url)
     {
@@ -346,7 +347,7 @@ class Content implements Arrayable
     /**
      * @param $cat
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addCat($cat)
     {
@@ -376,7 +377,7 @@ class Content implements Arrayable
     /**
      * @param $context
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setContext($context)
     {
@@ -396,7 +397,7 @@ class Content implements Arrayable
     /**
      * @param $contentrating
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setContentrating($contentrating)
     {
@@ -416,7 +417,7 @@ class Content implements Arrayable
     /**
      * @param $userrating
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setUserrating($userrating)
     {
@@ -436,7 +437,7 @@ class Content implements Arrayable
     /**
      * @param $qagmediarating
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setQagmediarating($qagmediarating)
     {
@@ -456,7 +457,7 @@ class Content implements Arrayable
     /**
      * @param $keywords
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setKeywords($keywords)
     {
@@ -476,7 +477,7 @@ class Content implements Arrayable
     /**
      * @param $livestream
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setLivestream($livestream)
     {
@@ -496,7 +497,7 @@ class Content implements Arrayable
     /**
      * @param $sourcerelationship
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setSourcerelationship($sourcerelationship)
     {
@@ -516,7 +517,7 @@ class Content implements Arrayable
     /**
      * @param $len
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setLen($len)
     {
@@ -535,7 +536,7 @@ class Content implements Arrayable
     /**
      * @param $language
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setLanguage($language)
     {
@@ -555,7 +556,7 @@ class Content implements Arrayable
     /**
      * @param $embeddable
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setEmbeddable($embeddable)
     {
@@ -593,7 +594,7 @@ class Content implements Arrayable
     /**
      * @param $artist
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setArtist($artist)
     {
@@ -614,7 +615,7 @@ class Content implements Arrayable
     /**
      * @param $genre
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setGenre($genre)
     {
@@ -635,7 +636,7 @@ class Content implements Arrayable
     /**
      * @param $album
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setAlbum($album)
     {
@@ -656,7 +657,7 @@ class Content implements Arrayable
     /**
      * @param $isrc
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setIsrc($isrc)
     {
@@ -677,7 +678,7 @@ class Content implements Arrayable
     /**
      * @param $prodq
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setProdq($prodq)
     {
@@ -698,7 +699,7 @@ class Content implements Arrayable
     /**
      * @param $context_22
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setContext22($context_22)
     {
@@ -707,6 +708,4 @@ class Content implements Arrayable
 
         return $this;
     }
-
-
 }

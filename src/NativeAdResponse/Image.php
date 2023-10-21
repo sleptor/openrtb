@@ -2,6 +2,7 @@
 
 namespace OpenRtb\NativeAdResponse;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -48,7 +49,7 @@ class Image implements Arrayable
     /**
      * @param string $url
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setUrl($url)
     {
@@ -68,7 +69,7 @@ class Image implements Arrayable
     /**
      * @param int $w
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setW($w)
     {
@@ -87,7 +88,7 @@ class Image implements Arrayable
     /**
      * @param int $h
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setH($h)
     {

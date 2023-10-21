@@ -3,6 +3,7 @@
 namespace OpenRtb\BidRequest;
 
 use OpenRtb\BidRequest\Specification\BitType;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -36,7 +37,7 @@ class Regs implements Arrayable
     /**
      * @param int $coppa
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setCoppa($coppa)
     {
@@ -62,6 +63,4 @@ class Regs implements Arrayable
         $this->ext = $ext;
         return $this;
     }
-
-
 }

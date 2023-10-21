@@ -130,5 +130,4 @@ class MapItem
     {
         return is_null($this->tags['default']);
     }
-
 }

@@ -2,6 +2,7 @@
 
 namespace OpenRtb\BidRequest;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -54,7 +55,7 @@ class Producer implements Arrayable
     /**
      * @param string $id
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setId($id)
     {
@@ -74,7 +75,7 @@ class Producer implements Arrayable
     /**
      * @param $name
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setName($name)
     {
@@ -94,7 +95,7 @@ class Producer implements Arrayable
     /**
      * @param string $cat
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addCat($cat)
     {
@@ -124,7 +125,7 @@ class Producer implements Arrayable
     /**
      * @param string $domain
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setDomain($domain)
     {

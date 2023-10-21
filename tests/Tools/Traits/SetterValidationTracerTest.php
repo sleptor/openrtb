@@ -14,7 +14,7 @@ class SetterValidationTracerTest extends TestCase
             $bidRequest->addCur(1);
         } catch (\Exception $e) {
             $this->assertStringContainsString(
-                'OpenRtb\BidRequest\BidRequest::addCur::474[validateString]',
+                'OpenRtb\BidRequest\BidRequest::addCur::468[validateString]',
                 $e->getMessage()
             );
         }

@@ -3,6 +3,7 @@
 namespace OpenRtb\NativeAdResponse;
 
 use OpenRtb\Tools\Classes\ArrayCollection;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -72,7 +73,7 @@ class Native implements Arrayable
     /**
      * @param int $ver
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setVer($ver)
     {
@@ -137,7 +138,7 @@ class Native implements Arrayable
     /**
      * @param string $imptrackers
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addImptrackers($imptrackers)
     {
@@ -167,7 +168,7 @@ class Native implements Arrayable
     /**
      * @param string $jstracker
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setJstracker($jstracker)
     {

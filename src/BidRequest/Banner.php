@@ -569,7 +569,4 @@ class Banner implements Arrayable
 
         return $this;
     }
-
-
-
 }

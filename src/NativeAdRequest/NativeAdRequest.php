@@ -5,6 +5,7 @@ namespace OpenRtb\NativeAdRequest;
 use OpenRtb\NativeAdRequest\Specification\NativeAdUnit;
 use OpenRtb\Tools\Classes\ArrayCollection;
 use OpenRtb\NativeAdRequest\Specification\NativeLayout;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -92,7 +93,7 @@ class NativeAdRequest implements Arrayable
     /**
      * @param string $ver
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setVer($ver)
     {
@@ -111,7 +112,7 @@ class NativeAdRequest implements Arrayable
     /**
      * @param int $layout
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setLayout($layout)
     {
@@ -131,7 +132,7 @@ class NativeAdRequest implements Arrayable
     /**
      * @param int $adunit
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setAdunit($adunit)
     {
@@ -151,7 +152,7 @@ class NativeAdRequest implements Arrayable
     /**
      * @param int $plcmtcnt
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setPlcmtcnt($plcmtcnt)
     {
@@ -170,7 +171,7 @@ class NativeAdRequest implements Arrayable
     /**
      * @param int $seq
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setSeq($seq)
     {

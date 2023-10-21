@@ -3,6 +3,7 @@
 namespace OpenRtb\BidRequest;
 
 use OpenRtb\BidRequest\Specification\BitType;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -211,7 +212,7 @@ class BidRequest implements Arrayable
     /**
      * @param string $id
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setId($id)
     {
@@ -352,7 +353,7 @@ class BidRequest implements Arrayable
     /**
      * @param $test
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setTest($test)
     {
@@ -372,7 +373,7 @@ class BidRequest implements Arrayable
     /**
      * @param $at
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setAt($at)
     {
@@ -391,7 +392,7 @@ class BidRequest implements Arrayable
     /**
      * @param int $tmax
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setTmax($tmax)
     {
@@ -410,7 +411,7 @@ class BidRequest implements Arrayable
     /**
      * @param string $wseat
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addWseat($wseat)
     {
@@ -440,7 +441,7 @@ class BidRequest implements Arrayable
     /**
      * @param int $allimps
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setAllimps($allimps)
     {
@@ -460,7 +461,7 @@ class BidRequest implements Arrayable
     /**
      * @param string $cur
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addCur($cur)
     {
@@ -490,7 +491,7 @@ class BidRequest implements Arrayable
     /**
      * @param string $bcat
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addBcat($bcat)
     {
@@ -520,7 +521,7 @@ class BidRequest implements Arrayable
     /**
      * @param string $badv
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addBadv($badv)
     {
@@ -542,7 +543,7 @@ class BidRequest implements Arrayable
     /**
      * @param string $bapp
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addBapp($bapp)
     {
@@ -583,7 +584,7 @@ class BidRequest implements Arrayable
     /**
      * @param string $bseat
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addBseat($bseat)
     {
@@ -605,7 +606,7 @@ class BidRequest implements Arrayable
     /**
      * @param string $wlang
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addWlang($wlang)
     {
@@ -623,7 +624,6 @@ class BidRequest implements Arrayable
         $this->wlang = $wlang;
         return $this;
     }
-
 
     /**
      * @return Source

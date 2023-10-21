@@ -26,57 +26,36 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
         $this->elements = $elements;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function toArray()
     {
         return $this->elements;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function first()
     {
         return reset($this->elements);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function last()
     {
         return end($this->elements);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function key()
     {
         return key($this->elements);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function next()
     {
         return next($this->elements);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function current()
     {
         return current($this->elements);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function remove($key)
     {
         if ( ! isset($this->elements[$key]) && ! array_key_exists($key, $this->elements)) {
@@ -87,9 +66,6 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
         return $removed;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function removeElement($element)
     {
         $key = array_search($element, $this->elements, true);
@@ -144,49 +120,31 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
         $this->remove($offset);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function containsKey($key)
     {
         return isset($this->elements[$key]) || array_key_exists($key, $this->elements);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function contains($element)
     {
         return in_array($element, $this->elements, true);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function indexOf($element)
     {
         return array_search($element, $this->elements, true);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function get($key)
     {
         return $this->elements[$key] ?? null;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getKeys()
     {
         return array_keys($this->elements);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getValues()
     {
         return array_values($this->elements);
@@ -200,26 +158,17 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
         return count($this->elements);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function set($key, $value)
     {
         $this->elements[$key] = $value;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function add($value)
     {
         $this->elements[] = $value;
         return true;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function isEmpty()
     {
         return empty($this->elements);
@@ -230,7 +179,7 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
      *
      * {@inheritDoc}
      */
-    public function getIterator(): \Traversable
+    public function getIterator(): ArrayIterator
     {
         return new ArrayIterator($this->elements);
     }
@@ -245,17 +194,11 @@ class ArrayCollection implements ArrayAccess, Countable, IteratorAggregate
         return __CLASS__ . '@' . spl_object_hash($this);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function clear()
     {
         $this->elements = array();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function slice($offset, $length = null)
     {
         return array_slice($this->elements, $offset, $length, true);

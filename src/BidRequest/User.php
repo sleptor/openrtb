@@ -3,6 +3,7 @@
 namespace OpenRtb\BidRequest;
 
 use OpenRtb\BidRequest\Specification\Gender;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -95,7 +96,7 @@ class User implements Arrayable
     /**
      * @param string $id
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setId($id)
     {
@@ -115,7 +116,7 @@ class User implements Arrayable
     /**
      * @param string $buyeruid
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setBuyeruid($buyeruid)
     {
@@ -135,7 +136,7 @@ class User implements Arrayable
     /**
      * @param string $gender
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setGender($gender)
     {
@@ -155,7 +156,7 @@ class User implements Arrayable
     /**
      * @param string $keywords
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setKeywords($keywords)
     {
@@ -175,7 +176,7 @@ class User implements Arrayable
     /**
      * @param string $customdata
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setCustomdata($customdata)
     {

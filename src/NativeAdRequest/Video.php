@@ -4,6 +4,7 @@ namespace OpenRtb\NativeAdRequest;
 
 use OpenRtb\BidRequest\Specification\VideoBidResponseProtocols;
 use OpenRtb\NativeAdRequest\Specification\VideoMimeType;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -57,7 +58,7 @@ class Video implements Arrayable
     /**
      * @param string $mimes
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addMimes($mimes)
     {
@@ -87,7 +88,7 @@ class Video implements Arrayable
     /**
      * @param int $minduration
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMinduration($minduration)
     {
@@ -106,7 +107,7 @@ class Video implements Arrayable
     /**
      * @param int $maxduration
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMaxduration($maxduration)
     {
@@ -125,7 +126,7 @@ class Video implements Arrayable
     /**
      * @param int $protocols
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addProtocols($protocols)
     {

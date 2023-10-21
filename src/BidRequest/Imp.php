@@ -3,6 +3,7 @@
 namespace OpenRtb\BidRequest;
 
 use OpenRtb\Tools\Classes\ArrayCollection;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\BidRequest\Specification\BitType;
 use OpenRtb\Tools\Traits\SetterValidation;
@@ -184,7 +185,7 @@ class Imp implements Arrayable
     /**
      * @param string $id
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setId($id)
     {
@@ -276,7 +277,7 @@ class Imp implements Arrayable
     /**
      * @param string $displaymanager
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setDisplaymanager($displaymanager)
     {
@@ -296,7 +297,7 @@ class Imp implements Arrayable
     /**
      * @param string $displaymanagerver
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setDisplaymanagerver($displaymanagerver)
     {
@@ -316,7 +317,7 @@ class Imp implements Arrayable
     /**
      * @param int $instl
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setInstl($instl)
     {
@@ -336,7 +337,7 @@ class Imp implements Arrayable
     /**
      * @param string $tagid
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setTagid($tagid)
     {
@@ -356,7 +357,7 @@ class Imp implements Arrayable
     /**
      * @param float $bidfloor
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setBidfloor($bidfloor)
     {
@@ -375,7 +376,7 @@ class Imp implements Arrayable
     /**
      * @param string $bidfloorcur
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setBidfloorcur($bidfloorcur)
     {
@@ -395,7 +396,7 @@ class Imp implements Arrayable
     /**
      * @param int $secure
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setSecure($secure)
     {
@@ -415,7 +416,7 @@ class Imp implements Arrayable
     /**
      * @param string $iframebuster
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addIframebuster($iframebuster)
     {
@@ -482,7 +483,7 @@ class Imp implements Arrayable
     /**
      * @param int $clickbrowser
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setClickbrowser($clickbrowser)
     {
@@ -502,7 +503,7 @@ class Imp implements Arrayable
     /**
      * @param string $exp
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setExp($exp)
     {
@@ -541,6 +542,4 @@ class Imp implements Arrayable
     {
         return $this->metric;
     }
-
-
 }

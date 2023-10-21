@@ -2,6 +2,7 @@
 
 namespace OpenRtb\BidRequest;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -45,7 +46,7 @@ class Metric implements Arrayable
     /**
      * @param $type
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setType($type)
     {
@@ -66,7 +67,7 @@ class Metric implements Arrayable
     /**
      * @param $value
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setValue($value)
     {
@@ -86,7 +87,7 @@ class Metric implements Arrayable
     /**
      * @param $vendor
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setVendor($vendor)
     {
@@ -95,6 +96,4 @@ class Metric implements Arrayable
 
         return $this;
     }
-
-
 }

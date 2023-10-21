@@ -7,6 +7,7 @@ use OpenRtb\BidRequest\Specification\CreativeAttributes;
 use OpenRtb\BidRequest\Specification\QagMediaRatings;
 use OpenRtb\BidRequest\Specification\VideoBidResponseProtocols;
 use OpenRtb\NativeAdResponse\NativeAdResponse;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -238,7 +239,7 @@ class Bid implements Arrayable
     /**
      * @param string $id
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setId($id)
     {
@@ -258,7 +259,7 @@ class Bid implements Arrayable
     /**
      * @param string $impid
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setImpid($impid)
     {
@@ -278,7 +279,7 @@ class Bid implements Arrayable
     /**
      * @param float $price
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setPrice($price)
     {
@@ -297,7 +298,7 @@ class Bid implements Arrayable
     /**
      * @param string $adid
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setAdid($adid)
     {
@@ -317,7 +318,7 @@ class Bid implements Arrayable
     /**
      * @param string $nurl
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setNurl($nurl)
     {
@@ -337,7 +338,7 @@ class Bid implements Arrayable
     /**
      * @param string $adm
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setAdm($adm)
     {
@@ -357,7 +358,7 @@ class Bid implements Arrayable
     /**
      * @param string $adomain
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addAdomain($adomain)
     {
@@ -387,7 +388,7 @@ class Bid implements Arrayable
     /**
      * @param string $bundle
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setBundle($bundle)
     {
@@ -407,7 +408,7 @@ class Bid implements Arrayable
     /**
      * @param string $iurl
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setIurl($iurl)
     {
@@ -427,7 +428,7 @@ class Bid implements Arrayable
     /**
      * @param string $cid
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setCid($cid)
     {
@@ -447,7 +448,7 @@ class Bid implements Arrayable
     /**
      * @param string $crid
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setCrid($crid)
     {
@@ -467,7 +468,7 @@ class Bid implements Arrayable
     /**
      * @param string $cat
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addCat($cat)
     {
@@ -497,7 +498,7 @@ class Bid implements Arrayable
     /**
      * @param int $attr
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addAttr($attr)
     {
@@ -527,7 +528,7 @@ class Bid implements Arrayable
     /**
      * @param string $dealid
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setDealid($dealid)
     {
@@ -547,7 +548,7 @@ class Bid implements Arrayable
     /**
      * @param int $h
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setH($h)
     {
@@ -566,7 +567,7 @@ class Bid implements Arrayable
     /**
      * @param int $w
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setW($w)
     {
@@ -621,7 +622,7 @@ class Bid implements Arrayable
     /**
      * @param $api
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setApi($api)
     {
@@ -641,7 +642,7 @@ class Bid implements Arrayable
     /**
      * @param $protocol
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setProtocol($protocol)
     {
@@ -661,7 +662,7 @@ class Bid implements Arrayable
     /**
      * @param $qagmediarating
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setQagmediarating($qagmediarating)
     {
@@ -681,7 +682,7 @@ class Bid implements Arrayable
     /**
      * @param $exp
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setExp($exp)
     {
@@ -701,7 +702,7 @@ class Bid implements Arrayable
     /**
      * @param $burl
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setBurl($burl)
     {
@@ -721,7 +722,7 @@ class Bid implements Arrayable
     /**
      * @param $lurl
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setLurl($lurl)
     {
@@ -741,7 +742,7 @@ class Bid implements Arrayable
     /**
      * @param $tactic
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setTactic($tactic)
     {
@@ -762,7 +763,7 @@ class Bid implements Arrayable
     /**
      * @param $language
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setLanguage($language)
     {
@@ -782,7 +783,7 @@ class Bid implements Arrayable
     /**
      * @param $wratio
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setWratio($wratio)
     {
@@ -802,7 +803,7 @@ class Bid implements Arrayable
     /**
      * @param $hratio
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setHratio($hratio)
     {
@@ -810,7 +811,4 @@ class Bid implements Arrayable
         $this->hratio = $hratio;
         return $this;
     }
-
-
-
 }

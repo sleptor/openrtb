@@ -23,7 +23,7 @@ class MapFactory
         $map = new Map();
         foreach ($mapSchema as $key => $value) {
             $tags = [];
-            if (strpos($key, ':') !== false) {
+            if (str_contains($key, ':')) {
                 [$key, $tags] = explode(':', $key);
                 $tags = self::normaliseTags($tags);
             }
@@ -33,7 +33,7 @@ class MapFactory
     }
 
     /**
-     * @param string/array $tags
+     * @param string|array $tags
      * @return array
      * @throws \Exception
      */
@@ -79,8 +79,8 @@ class MapFactory
             if (empty($tag)) {
                 continue;
             }
-            if (strpos($tag, ' ') !== false) {
-                list($tag, $value) = explode(' ', $tag);
+            if (str_contains($tag, ' ')) {
+                [$tag, $value] = explode(' ', $tag);
             }
             $result[$tag] = $value ?? true;
         }

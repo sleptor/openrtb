@@ -3,6 +3,8 @@
 namespace OpenRtb\BidResponse;
 
 use OpenRtb\BidResponse\Specification\NoBidReason;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
+use OpenRtb\Tools\Exceptions\ExceptionMissingRequiredField;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -77,7 +79,7 @@ class BidResponse implements Arrayable
 
     /**
      * @return false|string
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionMissingRequiredField
+     * @throws ExceptionMissingRequiredField
      */
     public function getBidResponse()
     {
@@ -95,7 +97,7 @@ class BidResponse implements Arrayable
     /**
      * @param string $id
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setId($id)
     {
@@ -143,7 +145,7 @@ class BidResponse implements Arrayable
     /**
      * @param string $bidid
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setBidid($bidid)
     {
@@ -163,7 +165,7 @@ class BidResponse implements Arrayable
     /**
      * @param string $cur
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setCur($cur)
     {
@@ -183,7 +185,7 @@ class BidResponse implements Arrayable
     /**
      * @param string $customdata
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setCustomdata($customdata)
     {
@@ -203,7 +205,7 @@ class BidResponse implements Arrayable
     /**
      * @param int $nbr
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setNbr($nbr)
     {

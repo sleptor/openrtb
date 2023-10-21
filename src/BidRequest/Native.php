@@ -3,6 +3,7 @@
 namespace OpenRtb\BidRequest;
 
 use OpenRtb\NativeAdRequest\NativeAdRequest;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\BidRequest\Specification\ApiFrameworks;
 use OpenRtb\BidRequest\Specification\CreativeAttributes;
@@ -67,7 +68,7 @@ class Native implements Arrayable
     /**
      * @param string $request
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setRequest($request)
     {
@@ -87,7 +88,7 @@ class Native implements Arrayable
     /**
      * @param string $ver
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setVer($ver)
     {
@@ -107,7 +108,7 @@ class Native implements Arrayable
     /**
      * @param int $api
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addApi($api)
     {
@@ -137,7 +138,7 @@ class Native implements Arrayable
     /**
      * @param int $battr
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addBattr($battr)
     {

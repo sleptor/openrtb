@@ -24,7 +24,7 @@ class Map implements Countable, IteratorAggregate
     /**
      * @return array
      */
-    public function getObjectPaths()
+    public function getObjectPaths(): array
     {
         return array_keys($this->map);
     }
@@ -33,7 +33,7 @@ class Map implements Countable, IteratorAggregate
      * @param string $objectPath
      * @return bool
      */
-    public function containsObjectPath($objectPath)
+    public function containsObjectPath($objectPath): bool
     {
         return isset($this->map[$objectPath]) || array_key_exists($objectPath, $this->map);
     }
@@ -51,7 +51,7 @@ class Map implements Countable, IteratorAggregate
      * @param string $objectPath
      * @return bool
      */
-    public function removeObjectPath($objectPath)
+    public function removeObjectPath($objectPath): bool
     {
         if ( ! $this->containsObjectPath($objectPath)) {
             return false;
@@ -63,7 +63,7 @@ class Map implements Countable, IteratorAggregate
     /**
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return count($this->map);
     }
@@ -71,7 +71,7 @@ class Map implements Countable, IteratorAggregate
     /**
      * @return ArrayIterator
      */
-    public function getIterator()
+    public function getIterator(): ArrayIterator
     {
         return new ArrayIterator($this->map);
     }

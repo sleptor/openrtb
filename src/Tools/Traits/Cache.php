@@ -2,9 +2,9 @@
 
 namespace OpenRtb\Tools\Traits;
 
-
 trait Cache
 {
+    public static $apcuLoaded = false;
     /**
      * @param string $key
      * @return bool

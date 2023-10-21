@@ -4,6 +4,7 @@ namespace OpenRtb\NativeAdRequest;
 
 use OpenRtb\NativeAdRequest\Specification\ImageAssetType;
 use OpenRtb\NativeAdRequest\Specification\ImageMimeType;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -68,7 +69,7 @@ class Image implements Arrayable
     /**
      * @param int $type
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setType($type)
     {
@@ -88,7 +89,7 @@ class Image implements Arrayable
     /**
      * @param int $w
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setW($w)
     {
@@ -107,7 +108,7 @@ class Image implements Arrayable
     /**
      * @param int $wmin
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setWmin($wmin)
     {
@@ -126,7 +127,7 @@ class Image implements Arrayable
     /**
      * @param int $h
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setH($h)
     {
@@ -145,7 +146,7 @@ class Image implements Arrayable
     /**
      * @param int $hmin
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setHmin($hmin)
     {
@@ -164,7 +165,7 @@ class Image implements Arrayable
     /**
      * @param string $mimes
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addMimes($mimes)
     {
