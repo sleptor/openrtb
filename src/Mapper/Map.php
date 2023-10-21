@@ -40,7 +40,7 @@ class Map implements Countable, IteratorAggregate
 
     /**
      * @param string $objectPath
-     * @return MapItem/null
+     * @return MapItem|null
      */
     public function get($objectPath)
     {
