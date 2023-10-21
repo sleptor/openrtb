@@ -18,8 +18,8 @@ class ObjectDescriberFactory
     public static function create($className)
     {
         $className = self::checkClassName($className);
-        if (self::cacheHas($className)) {
-            return apcu_fetch($className);
+        if (($objectDescriber = self::cacheFetch($className)) !== false) {
+            return $objectDescriber;
         }
 
         $reflectionClass = new ReflectionClass($className);
@@ -42,7 +42,7 @@ class ObjectDescriberFactory
         if (is_object($className)) {
             $className = get_class($className);
         }
-        if ( ! class_exists($className)) {
+        if (!class_exists($className)) {
             throw new \Exception('Class does not exist');
         }
         return $className;
@@ -50,7 +50,7 @@ class ObjectDescriberFactory
 
     /**
      * @param ReflectionClass $reflectionClass
-     * @return ParametersBag
+     * @return AnnotationsBag[]
      */
     private static function createPropertiesBag(ReflectionClass $reflectionClass)
     {
@@ -63,7 +63,7 @@ class ObjectDescriberFactory
 
     /**
      * @param ReflectionClass $reflectionClass
-     * @return ParametersBag
+     * @return array
      */
     private static function createMethodsBag(ReflectionClass $reflectionClass)
     {

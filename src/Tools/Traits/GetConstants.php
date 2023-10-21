@@ -13,9 +13,9 @@ trait GetConstants
      */
     public static function getAll()
     {
-        $className = md5('const'.__CLASS__);
-        if (self::cacheHas($className)) {
-            return apcu_fetch($className);
+        $className = md5('const' . __CLASS__);
+        if (($constants = self::cacheFetch($className)) !== false) {
+            return $constants;
         }
 
         $constants = self::getConstants();

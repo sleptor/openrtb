@@ -4,25 +4,13 @@ namespace OpenRtb\Tools\Traits;
 
 trait Cache
 {
-    public static $apcuLoaded = false;
-    /**
-     * @param string $key
-     * @return bool
-     */
-    protected static function cacheHas($key)
+    protected static function cacheFetch($key)
     {
-        if (self::apcuExists()) {
-            return apcu_exists($key);
+        if (!self::apcuExists()) {
+            return false;
         }
-        return false;
-    }
 
-    /**
-     * @return bool
-     */
-    protected static function apcuExists()
-    {
-        return extension_loaded("apcu");
+        return apcu_fetch($key);
     }
 
     /**
@@ -32,9 +20,18 @@ trait Cache
      */
     protected static function cacheStore($key, $item)
     {
-        if (self::apcuExists()) {
-            return apcu_store($key, $item);
+        if (!self::apcuExists()) {
+            return false;
         }
-        return false;
+
+        return apcu_store($key, $item);
+    }
+
+    /**
+     * @return bool
+     */
+    protected static function apcuExists(): bool
+    {
+        return extension_loaded("apcu");
     }
 }
