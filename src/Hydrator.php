@@ -27,8 +27,8 @@ class Hydrator
                 $objectDescriptor->properties->get($key)->get('var') === 'ArrayCollection'
             ) {
                 self::set($object, $key, self::getDependencyObject($objectDescriptor, $key));
-                $method = 'add'.ucfirst($key);
-                if ( ! $objectDescriptor->methods->has($method) || ! $objectDescriptor->methods->get($method)) {
+                $method = 'add' . ucfirst($key);
+                if (!$objectDescriptor->methods->has($method) || !$objectDescriptor->methods->get($method)) {
                     throw new \Exception(sprintf('Method %s does not exist', $method));
                 }
                 foreach ($value as $item) {
@@ -56,7 +56,8 @@ class Hydrator
      */
     protected static function checkFirstArrayKey(array $data, ObjectDescriber $objectDescriber)
     {
-        if (strtolower(current(array_keys($data))) === strtolower($objectDescriber->getClassNameWithoutNamespace())) {
+        $firstKey = array_key_first($data);
+        if ($firstKey && strtolower($firstKey) === strtolower($objectDescriber->getClassNameWithoutNamespace())) {
             return current($data);
         }
         return $data;
@@ -72,7 +73,7 @@ class Hydrator
     protected static function getDependencyObject(ObjectDescriber $objectDescriber, $key, $getClassNameFromAnnotation = true)
     {
         $newClassName = self::getDependencyClassName($objectDescriber, $key, $getClassNameFromAnnotation);
-        if ( ! class_exists($newClassName)) {
+        if (!class_exists($newClassName)) {
             $newClassName = self::tryPluralDependencyObject($newClassName);
         }
         return new $newClassName;
@@ -85,7 +86,7 @@ class Hydrator
      */
     protected static function tryPluralDependencyObject($newClassName)
     {
-        if ( ! substr($newClassName, -1) === 's' || ! class_exists($pluralClassName = substr($newClassName, 0, -1))) {
+        if (!str_ends_with($newClassName, 's') || !class_exists($pluralClassName = substr($newClassName, 0, -1))) {
             throw new \Exception(sprintf('Class %s does not exist', $newClassName));
         }
         return $pluralClassName;
@@ -105,7 +106,7 @@ class Hydrator
         if ($key === 'ArrayCollection') {
             return 'OpenRtb\Tools\Classes\ArrayCollection';
         }
-        return $objectDescriber->getNamespace().'\\'.$key;
+        return $objectDescriber->getNamespace() . '\\' . $key;
     }
 
     /**
@@ -116,8 +117,8 @@ class Hydrator
      */
     protected static function set($object, $key, $value)
     {
-        $method = 'set'.ucfirst($key);
-        if ( ! method_exists($object, $method)) {
+        $method = 'set' . ucfirst($key);
+        if (!method_exists($object, $method)) {
             throw new \Exception(sprintf('Method %s does not exist', $method));
         }
         $object->$method($value);

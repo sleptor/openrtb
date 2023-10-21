@@ -2,6 +2,7 @@
 
 namespace OpenRtb\Tests\Tools\Traits;
 
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use PHPUnit\Framework\TestCase;
 use OpenRtb\Tests\AccessProtectedMethod;
 
@@ -24,7 +25,7 @@ class SetterValidationTest extends TestCase
      */
     public function testValidateStringException($value)
     {
-        $this->expectException(\OpenRtb\Tools\Exceptions\ExceptionInvalidValue::class);
+        $this->expectException(ExceptionInvalidValue::class);
         AccessProtectedMethod::invokeMethod($this->setterValidation, 'validateString', [$value]);
     }
 
@@ -49,7 +50,7 @@ class SetterValidationTest extends TestCase
      */
     public function testValidateIntException($value)
     {
-        $this->expectException(\OpenRtb\Tools\Exceptions\ExceptionInvalidValue::class);
+        $this->expectException(ExceptionInvalidValue::class);
         AccessProtectedMethod::invokeMethod($this->setterValidation, 'validateInt', [$value, 1]);
     }
 
@@ -73,7 +74,7 @@ class SetterValidationTest extends TestCase
      */
     public function testValidatePositiveIntException($value)
     {
-        $this->expectException(\OpenRtb\Tools\Exceptions\ExceptionInvalidValue::class);
+        $this->expectException(ExceptionInvalidValue::class);
         AccessProtectedMethod::invokeMethod($this->setterValidation, 'validatePositiveInt', [$value, 1]);
     }
 
@@ -112,7 +113,7 @@ class SetterValidationTest extends TestCase
      */
     public function testValidatePositiveFloatException($value)
     {
-        $this->expectException(\OpenRtb\Tools\Exceptions\ExceptionInvalidValue::class);
+        $this->expectException(ExceptionInvalidValue::class);
         AccessProtectedMethod::invokeMethod($this->setterValidation, 'validatePositiveFloat', [$value, 1]);
     }
 
@@ -141,7 +142,7 @@ class SetterValidationTest extends TestCase
      */
     public function testValidateInException($value, $validValues)
     {
-        $this->expectException(\OpenRtb\Tools\Exceptions\ExceptionInvalidValue::class);
+        $this->expectException(ExceptionInvalidValue::class);
         AccessProtectedMethod::invokeMethod($this->setterValidation, 'validateIn', [$value, $validValues, 1]);
     }
 
@@ -176,7 +177,7 @@ class SetterValidationTest extends TestCase
      */
     public function testValidateInWithCustom500ValuesException($value, $validValues)
     {
-        $this->expectException(\OpenRtb\Tools\Exceptions\ExceptionInvalidValue::class);
+        $this->expectException(ExceptionInvalidValue::class);
         AccessProtectedMethod::invokeMethod(
             $this->setterValidation,
             'validateInWithCustom500Values',
@@ -202,7 +203,7 @@ class SetterValidationTest extends TestCase
      */
     public function testValidateMd5Exception($value)
     {
-        $this->expectException(\OpenRtb\Tools\Exceptions\ExceptionInvalidValue::class);
+        $this->expectException(ExceptionInvalidValue::class);
         AccessProtectedMethod::invokeMethod($this->setterValidation, 'validateMd5', [$value, 1]);
     }
 
@@ -228,7 +229,7 @@ class SetterValidationTest extends TestCase
      */
     public function testValidateSha1Exception($value)
     {
-        $this->expectException(\OpenRtb\Tools\Exceptions\ExceptionInvalidValue::class);
+        $this->expectException(ExceptionInvalidValue::class);
         AccessProtectedMethod::invokeMethod($this->setterValidation, 'validateSha1', [$value, 1]);
     }
 
@@ -270,7 +271,7 @@ class SetterValidationTest extends TestCase
      */
     public function testValidateIpException($ip)
     {
-        $this->expectException(\OpenRtb\Tools\Exceptions\ExceptionInvalidValue::class);
+        $this->expectException(ExceptionInvalidValue::class);
         $this->assertTrue(AccessProtectedMethod::invokeMethod($this->setterValidation, 'validateIp', [$ip]));
     }
 

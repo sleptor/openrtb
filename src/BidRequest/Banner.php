@@ -8,6 +8,7 @@ use OpenRtb\BidRequest\Specification\BannerAdTypes;
 use OpenRtb\BidRequest\Specification\CreativeAttributes;
 use OpenRtb\BidRequest\Specification\ExpandableDirection;
 use OpenRtb\Tools\Classes\ArrayCollection;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\BidRequest\Specification\BannerMimeType;
 use OpenRtb\Tools\Traits\SetterValidation;
@@ -188,7 +189,7 @@ class Banner implements Arrayable
     /**
      * @param int $w
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setW($w)
     {
@@ -207,7 +208,7 @@ class Banner implements Arrayable
     /**
      * @param int $h
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setH($h)
     {
@@ -226,7 +227,7 @@ class Banner implements Arrayable
     /**
      * @param int $wmax
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setWmax($wmax)
     {
@@ -245,7 +246,7 @@ class Banner implements Arrayable
     /**
      * @param int $hmax
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setHmax($hmax)
     {
@@ -264,7 +265,7 @@ class Banner implements Arrayable
     /**
      * @param int $wmin
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setWmin($wmin)
     {
@@ -283,7 +284,7 @@ class Banner implements Arrayable
     /**
      * @param int $hmin
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setHmin($hmin)
     {
@@ -302,7 +303,7 @@ class Banner implements Arrayable
     /**
      * @param string $id
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setId($id)
     {
@@ -322,7 +323,7 @@ class Banner implements Arrayable
     /**
      * @param int $btype
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addBtype($btype)
     {
@@ -352,7 +353,7 @@ class Banner implements Arrayable
     /**
      * @param int $battr
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addBattr($battr)
     {
@@ -382,7 +383,7 @@ class Banner implements Arrayable
     /**
      * @param int $pos
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setPos($pos)
     {
@@ -401,7 +402,7 @@ class Banner implements Arrayable
     /**
      * @param string $mimes
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addMimes($mimes)
     {
@@ -431,7 +432,7 @@ class Banner implements Arrayable
     /**
      * @param int $topframe
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setTopframe($topframe)
     {
@@ -450,7 +451,7 @@ class Banner implements Arrayable
     /**
      * @param int $expdir
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addExpdir($expdir)
     {
@@ -480,7 +481,7 @@ class Banner implements Arrayable
     /**
      * @param int $api
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addApi($api)
     {
@@ -560,7 +561,7 @@ class Banner implements Arrayable
     /**
      * @param $vcm
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setVcm($vcm)
     {

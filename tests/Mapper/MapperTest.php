@@ -21,7 +21,7 @@ class MapperTest extends TestCase
         $map = MapFactory::create($demoMap);
 
         $mapper = new Mapper();
-        $arrayMapped = $mapper->mapFromValues($map, new BidRequest());
+        $arrayMapped = $mapper->mapFromValues($map);
 
         $myObject = new BidRequest();
         Hydrator::hydrate($arrayMapped, $myObject);
@@ -75,7 +75,7 @@ class MapperTest extends TestCase
         $mapper = new Mapper();
         $arrayMapped = $mapper->mapFromObject($map, $bidRequest);
 
-        $this->assertTrue(is_array($arrayMapped));
+        $this->assertIsArray($arrayMapped);
         $this->assertEquals('bidRequestId', $arrayMapped['native']['request']);
         $this->assertEquals('impId', $arrayMapped['id']);
     }

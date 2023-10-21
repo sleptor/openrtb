@@ -11,6 +11,7 @@ use OpenRtb\BidRequest\Specification\VastCompanionTypes;
 use OpenRtb\BidRequest\Specification\VideoBidResponseProtocols;
 use OpenRtb\BidRequest\Specification\VideoMimeType;
 use OpenRtb\BidRequest\Specification\VolumeNormalizationMode;
+use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -191,7 +192,7 @@ class Audio implements Arrayable
     /**
      * @param string $mimes
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addMimes($mimes)
     {
@@ -221,7 +222,7 @@ class Audio implements Arrayable
     /**
      * @param int $minduration
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMinduration($minduration)
     {
@@ -240,7 +241,7 @@ class Audio implements Arrayable
     /**
      * @param int $maxduration
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMaxduration($maxduration)
     {
@@ -261,7 +262,7 @@ class Audio implements Arrayable
      * @deprecated
      * @param $protocol
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setProtocol($protocol)
     {
@@ -280,7 +281,7 @@ class Audio implements Arrayable
     /**
      * @param int $protocols
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addProtocols($protocols)
     {
@@ -310,7 +311,7 @@ class Audio implements Arrayable
     /**
      * @param int $startdelay
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setStartdelay($startdelay)
     {
@@ -329,7 +330,7 @@ class Audio implements Arrayable
     /**
      * @param int $sequence
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setSequence($sequence)
     {
@@ -348,7 +349,7 @@ class Audio implements Arrayable
     /**
      * @param int $battr
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addBattr($battr)
     {
@@ -378,7 +379,7 @@ class Audio implements Arrayable
     /**
      * @param int $maxextended
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMaxextended($maxextended)
     {
@@ -397,7 +398,7 @@ class Audio implements Arrayable
     /**
      * @param int $minbitrate
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMinbitrate($minbitrate)
     {
@@ -416,7 +417,7 @@ class Audio implements Arrayable
     /**
      * @param int $maxbitrate
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMaxbitrate($maxbitrate)
     {
@@ -435,7 +436,7 @@ class Audio implements Arrayable
     /**
      * @param int $delivery
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addDelivery($delivery)
     {
@@ -493,7 +494,7 @@ class Audio implements Arrayable
     /**
      * @param int $api
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addApi($api)
     {
@@ -523,7 +524,7 @@ class Audio implements Arrayable
     /**
      * @param $companiontype
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function addCompaniontype($companiontype)
     {
@@ -571,7 +572,7 @@ class Audio implements Arrayable
     /**
      * @param $maxseq
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setMaxseq($maxseq)
     {
@@ -592,7 +593,7 @@ class Audio implements Arrayable
     /**
      * @param $feed
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setFeed($feed)
     {
@@ -613,7 +614,7 @@ class Audio implements Arrayable
     /**
      * @param $stitched
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setStitched($stitched)
     {
@@ -634,7 +635,7 @@ class Audio implements Arrayable
     /**
      * @param $nvol
      * @return $this
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionInvalidValue
+     * @throws ExceptionInvalidValue
      */
     public function setNvol($nvol)
     {

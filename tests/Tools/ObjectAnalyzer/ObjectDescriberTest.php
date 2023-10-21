@@ -18,7 +18,7 @@ class ObjectDescriberTest extends TestCase
         $this->assertInstanceOf('Traversable', $descriptor->properties);
 
         foreach ($descriptor->properties as $propertyName => $property) {
-            $this->assertTrue(is_string($propertyName));
+            $this->assertIsString($propertyName);
             $this->assertEquals($propertyName, $property->get('name'));
             $this->assertInstanceOf('OpenRtb\Tools\ObjectAnalyzer\AnnotationsBag', $property);
         }

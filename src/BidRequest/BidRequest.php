@@ -4,6 +4,7 @@ namespace OpenRtb\BidRequest;
 
 use OpenRtb\BidRequest\Specification\BitType;
 use OpenRtb\Tools\Exceptions\ExceptionInvalidValue;
+use OpenRtb\Tools\Exceptions\ExceptionMissingRequiredField;
 use OpenRtb\Tools\Interfaces\Arrayable;
 use OpenRtb\Tools\Traits\SetterValidation;
 use OpenRtb\Tools\Traits\ToArray;
@@ -185,7 +186,7 @@ class BidRequest implements Arrayable
 
     /**
      * @return false|string
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionMissingRequiredField
+     * @throws ExceptionMissingRequiredField
      */
     public function getBidRequest()
     {
@@ -194,7 +195,7 @@ class BidRequest implements Arrayable
 
     /**
      * @return false|string
-     * @throws \OpenRtb\Tools\Exceptions\ExceptionMissingRequiredField
+     * @throws ExceptionMissingRequiredField
      */
     public function getRequest()
     {
