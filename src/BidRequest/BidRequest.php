@@ -176,12 +176,12 @@ class BidRequest implements Arrayable
     public function initialize()
     {
         $this->setImp(new ArrayCollection());
-        $this->setSite(new Site());
-        $this->setApp(new App());
+        //$this->setSite(new Site());
+        //$this->setApp(new App());
         $this->setDevice(new Device());
         $this->setUser(new User());
-        $this->setRegs(new Regs());
-        $this->setSource(new Source());
+        //$this->setRegs(new Regs());
+        //$this->setSource(new Source());
     }
 
     /**
