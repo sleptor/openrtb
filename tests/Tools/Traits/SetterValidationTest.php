@@ -193,20 +193,6 @@ class SetterValidationTest extends TestCase
         ];
     }
 
-    public function testValidateMd5()
-    {
-        $this->assertTrue(AccessProtectedMethod::invokeMethod($this->setterValidation, 'validateMd5', [md5(1), 1]));
-    }
-
-    /**
-     * @dataProvider validateMd5ExceptionProvider
-     */
-    public function testValidateMd5Exception($value)
-    {
-        $this->expectException(ExceptionInvalidValue::class);
-        AccessProtectedMethod::invokeMethod($this->setterValidation, 'validateMd5', [$value, 1]);
-    }
-
     public function validateMd5ExceptionProvider()
     {
         return [
@@ -217,20 +203,6 @@ class SetterValidationTest extends TestCase
             [1.234],
             [new \stdClass]
         ];
-    }
-
-    public function testValidateSha1()
-    {
-        $this->assertTrue(AccessProtectedMethod::invokeMethod($this->setterValidation, 'validateSha1', [sha1(1), 1]));
-    }
-
-    /**
-     * @dataProvider validateSha1ExceptionProvider
-     */
-    public function testValidateSha1Exception($value)
-    {
-        $this->expectException(ExceptionInvalidValue::class);
-        AccessProtectedMethod::invokeMethod($this->setterValidation, 'validateSha1', [$value, 1]);
     }
 
     public function validateSha1ExceptionProvider()

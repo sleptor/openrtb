@@ -175,42 +175,6 @@ trait SetterValidation
     }
 
     /**
-     * @param string $md5
-     * @return bool
-     * @throws ExceptionInvalidValue
-     */
-    protected function validateMd5($md5)
-    {
-        if ( ! is_string($md5) || ! (bool) preg_match('/^[0-9a-f]{32}$/i', $md5)) {
-            throw new ExceptionInvalidValue(
-                vsprintf(
-                    'Argument\'s value (%s of type %s) is not MD5',
-                    $this->argumentsForError($md5)
-                )
-            );
-        }
-        return true;
-    }
-
-    /**
-     * @param string $sha1
-     * @return bool
-     * @throws ExceptionInvalidValue
-     */
-    protected function validateSha1($sha1)
-    {
-        if ( ! is_string($sha1) || ! (bool) preg_match('/^[0-9a-f]{40}$/i', $sha1)) {
-            throw new ExceptionInvalidValue(
-                vsprintf(
-                    'Argument\'s value (%s of type %s) is not SHA1',
-                    $this->argumentsForError($sha1)
-                )
-            );
-        }
-        return true;
-    }
-
-    /**
      * @param string $ip
      * @return bool
      * @throws ExceptionInvalidValue

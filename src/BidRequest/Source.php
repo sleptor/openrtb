@@ -107,7 +107,7 @@ class Source implements Arrayable
      */
     public function setPchain($pchain)
     {
-        $this->validateSha1($pchain);
+        $this->validateString($pchain);
         $this->pchain = $pchain;
 
         return $this;
